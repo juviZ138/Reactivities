@@ -45,6 +45,7 @@ export default function NavBar() {
               <MenuItemLink to="/activities">Activties</MenuItemLink>
               <MenuItemLink to="/createActivity">Create Activity</MenuItemLink>
               <MenuItemLink to="/Counter">Counter</MenuItemLink>
+              <MenuItemLink to="/errors">Errors</MenuItemLink>
             </Box>
             <Button
               onClick={() => {}}
