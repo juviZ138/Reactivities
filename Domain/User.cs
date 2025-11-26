@@ -10,4 +10,5 @@ public class User : IdentityUser
     public string? ImageUrl { get; set; }
     // nav property
     public ICollection<ActivityAttendee> Activities { get; set; } = [];
+    public ICollection<Photo> Photos { get; set; } = [];
 }
