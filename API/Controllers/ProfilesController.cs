@@ -1,9 +1,11 @@
 using System;
+using API.DTOs;
 using Application.Profiles.Commands;
 using Application.Profiles.DTOs;
 using Application.Profiles.Queries;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Differencing;
 
 namespace API.Controllers;
 
@@ -37,5 +39,11 @@ public class ProfilesController : BaseApiController
     public async Task<ActionResult<UserProfile>> GetUserProfile(string userId)
     {
         return HandleResult(await Mediator.Send(new GetProfile.Query { UserId = userId }));
+    }
+
+    [HttpPut]
+    public async Task<ActionResult> EditUserProfile(EditProfile.Command command)
+    {
+        return HandleResult(await Mediator.Send(command));
     }
 }
