@@ -12,6 +12,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+API/appsettings.Development.json
+API/appsettings.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -485,7 +487,4 @@ $RECYCLE.BIN/
 API/appsettings.json
 API/reactivities.db
 API/reactivities.db-shm
-API/reactivities.db-wal
-API/wwwroot
-API/appsettings.Development.json
-API/appsettings.json
+.gitignore
