@@ -28,7 +28,16 @@ builder.Services.AddControllers(opt =>
 });
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
+    sqlServerOptionsAction: sqlOptions =>
+        {
+            // THÊM DÒNG NÀY
+            sqlOptions.EnableRetryOnFailure(
+                maxRetryCount: 5, // Thử lại tối đa 5 lần
+                maxRetryDelay: TimeSpan.FromSeconds(30), // Thời gian chờ tối đa giữa các lần thử
+                errorNumbersToAdd: null // Các mã lỗi SQL cụ thể (để null để dùng mặc định)
+            );
+        });
 });
 builder.Services.AddCors();
 builder.Services.AddSignalR();
