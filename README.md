@@ -7,8 +7,6 @@ Reactivities is a full-featured web application built using React for the fronte
 - **Frontend**: React
 - **Backend**: .NET Core API
 - **Database**: SQL Server
-- **State Management**: Redux
-- **Styles**: CSS/SCSS
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
