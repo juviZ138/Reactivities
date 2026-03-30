@@ -64,7 +64,7 @@ export default function NavBar() {
             </Box>
             <Box sx={{ display: "flex" }}>
               <MenuItemLink to="/activities">Activties</MenuItemLink>
-              <MenuItemLink to="/Counter">Counter</MenuItemLink>
+              {/* <MenuItemLink to="/Counter">Counter</MenuItemLink> */}
               <MenuItemLink to="/errors">Errors</MenuItemLink>
             </Box>
             <Box display={"flex"} alignItems={"center"}>

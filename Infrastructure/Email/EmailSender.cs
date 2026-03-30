@@ -53,7 +53,7 @@ public class EmailSender(IResend resend, IConfiguration config) : IEmailSender<U
     {
         var message = new EmailMessage
         {
-            From = "whatever@resend.dev",
+            From = "dientam@qldtam.dev",
             Subject = subject,
             HtmlBody = body
         };
